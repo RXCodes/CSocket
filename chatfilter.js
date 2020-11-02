@@ -1,4 +1,14 @@
+function IsJsonString(str) {
+  try {
+    JSON.parse(str);
+  } catch (e) {
+    return false;
+  }
+  return true;
+}
+
 exports.process = function(data) {
+  if (IsJsonString(data)) {
   var dict = JSON.parse(data);
   if (dict.hasOwnProperty("message") && dict.hasOwnProperty("words")) {
   var filter = message; 
@@ -17,4 +27,5 @@ count = count + "*";
     data["censored"] = filter;
   return data;
   }
+}
 }
