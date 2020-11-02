@@ -21,6 +21,7 @@ function Load() {
         margin: 0;
         padding: 0;
         font: Arial 14px;
+        overflow-x: hidden;
       }
       
       .center {
@@ -28,20 +29,41 @@ function Load() {
   padding:5px;
   margin-left: auto;
   margin-right: auto;
+        overflow-x: hidden;
  
 }
       
       #grad {
         height: 1000px;
-        width: 1300px;
+        width: 1200px;
         background-color: #3e8bff;
         background-image: linear-gradient(to top, #144370 0.0%, #32a1ff 100.0%);
         position: fixed;
         top: 0;
         right: -20;
         z-index: -99999;
+        overflow-x: hidden;
       }
-      
+         #topgrad {
+        height: 200px;
+        width: 1200px;
+        background-image: linear-gradient(to top, #3e8bff00 0.0%, #3e8bff99 100.0%);
+        position: fixed;
+        top: 0;
+        right: -20;
+        z-index: 999;
+        overflow-x: hidden;
+      }
+      #bottomgrad {
+        height: 100px;
+        width: 1200px;
+        background-image: linear-gradient(180deg, #14437000 0.0%, #14437099 100.0%);
+        position: fixed;
+        bottom: 0;
+        right: -20;
+        z-index: 999;
+        overflow-x: hidden;
+      }
       
         
         @keyframes swing {
@@ -63,57 +85,71 @@ function Load() {
       
 
       #title {
+        padding: 0px;
     animation-name: swing; 
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
+        overflow-x: hidden;
       }
       
-      @keyframes bounce {
-        0% {transform: translate(0,10);
-        transform: scale(30%,30%);
-          -webkit-transform: translate(0,10);
-        -webkit-transform: scale(30%,30%);
-          -moz-transform: translate(0,10);
-        -moz-transform: scale(30%,30%);
-         -o-transform: translate(0,10);
-        -o-transform: scale(30%,30%);
-        }
-  100% {transform: translate(0,15);
-        transform: scale(40%,40%);
-        -webkit-transform: translate(0,15);
-        -webkit-transform: scale(40%,40%);
-        -moz-transform: translate(0,15);
-       -moz-transform: scale(40%,40%);
-        -o-transform: translate(0,15);
-       -o-transform: scale(40%,40%);
-        }
-        }
-
-        #test {
-animation-name: bounce; 
-    animation-duration: 1.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
+      #stripes {
+        -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+position: fixed;
+        z-index: -2;
+        width: 1350px;
+        height: 1350px;
+        overflow-x: hidden;
 }
-      
-.fadeIn {
-	animation-duration:2s;
-	animation-name:fadeIn;
-}
-      
-    </style>
     
+      .login {
+        position: relative;
+        text-align: center;
+        height: 50px;
+        margin-left: auto;
+    margin-right: auto;
+        -ms-transform: scale(2, 2); /* IE 9 */
+        -webkit-transform: scale(2, 2); /* Safari */
+        transform: scale(2, 2);
+        overflow-x: hidden;
+        padding: 10px;
+        
+}
+    </style>
+   
   </head>
   <body onload="Load()">
     <div id="grad"></div>
-    <img src="https://botpixel-games.000webhostapp.com/title-logo.png"
-         width = 90% top = 100px z-index=2 class="center fadeIn" id=title>
-      <img src="https://botpixel-games.000webhostapp.com/online.png"
-         width = 30% z-index=3 id=test class=center>
-
+     <div id="topgrad"></div>
+    <div id="bottomgrad"></div>
+    <img src="https://raw.githubusercontent.com/RXCodes/Pen-Down-Server/master/contents/2A73C87D-694D-4EA2-AB42-16CEE9DE31CA.png"
+         width = 90% top = 100px class="center fadeIn" id=title>
+      <img src="https://raw.githubusercontent.com/RXCodes/Pen-Down-Server/master/contents/8F685713-8AE4-459E-A39B-125375C959FE.png"
+          z-index=3 id=stripes class=center
+           style="opacity:0.15; top: -70px; left: 0px;"
+           >
+          <img src="https://raw.githubusercontent.com/RXCodes/Pen-Down-Server/master/contents/8F685713-8AE4-459E-A39B-125375C959FE.png"
+          z-index=3 id=stripes class=center
+           style="opacity:0.15; top: -695px; left: -1250px;"
+           >
+    <div style="position:relative; top:-100px; width:1000px">
+      
+                   <div class="login center">
+					   <input type="text" name="" placeholder="username">
+				   </div>
+				   <div class="login center">
+					   <input type="password" name="" placeholder="password">
+				   </div>
+				   
+				   <div class="login center">
+					   <input type="submit" value="Login" onclick="alert('login action')">
+                     <input type="submit" value="Sign Up" onclick="alert('sign up action')">
+				   </div>
+    </div>
     
   </body>
 
