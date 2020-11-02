@@ -18,7 +18,8 @@ io.on('connection', function(socket) {
   
   socket.on('chat', function(data) {
     var data = JSON.parse(data);
-    io.in(socket.room).emit('chat', data);
+    var output = filter.process(data.message, data.words);
+    io.in(socket.room).emit('chat', output);
       
     
   });
