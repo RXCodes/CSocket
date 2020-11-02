@@ -17,10 +17,6 @@ io.on('connection', function(socket) {
   });
   
   socket.on('chat', function(data) {
-    try {
-      JSON.parse(data);
-    } catch (e) {}
-    var data = JSON.parse(data);
     var output = filter.process(data);
     io.in(socket.room).emit('chat', output);
     }
