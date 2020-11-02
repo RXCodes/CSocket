@@ -1,7 +1,7 @@
 
 exports.process = function(data) {
   try {
-    JSON.parse(str);
+    JSON.parse(data);
   } catch (e) {
     return "Error";
   }
