@@ -11,6 +11,9 @@ io.on('connection', function(socket) {
   socket.room = 'none';  
   
   socket.on('join', function(data) {
+if (typeof socket.join != 'undefined') {
+    socket.leave(socket.room);
+}
     socket.room = data;
     socket.join(data);
   });
@@ -18,7 +21,7 @@ io.on('connection', function(socket) {
   socket.on('chat', function(data) {
     data = JSON.parse(data);
     var filter = data;
-    if (typeof data.message == 'undefined') {
+    if (typeof data.message != 'undefined') {
     var banned = JSON.parse(data.filter);
     for (i = 0; i < banned.length; i++) {
     var count = "";
