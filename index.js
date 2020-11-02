@@ -19,15 +19,6 @@ io.on('connection', function(socket) {
     data = JSON.parse(data);
     var filter = data;
     var banned = JSON.parse(data.filter);
-    for (i = 0; i < banned.length; i++) {
-    var count = "";
-    var word = banned[i];
-    for (x = 0; x < word.length; x++) {
-    count = count + "*";
-  }
-      var re = new RegExp(banned[i],"gi");
-      var filter = filter.replace(re,count);
-  }
     var send = {
       "original": data.message;
       "filter": filter;
