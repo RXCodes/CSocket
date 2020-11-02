@@ -7,9 +7,9 @@ exports.process = function(data) {
   }
   var dict = JSON.parse(data);
   if (dict.hasOwnProperty("message") && dict.hasOwnProperty("words")) {
-  var filter = message; 
-  
-  var banned = JSON.parse(check);
+  var filter = dict.message; 
+  var words = dict.words;
+  var banned = JSON.parse(words);
   for (i = 0; i < banned.length; i++) {
     var count = "";
     var word = banned[i];
@@ -21,6 +21,6 @@ count = count + "*";
       filter = filter.replace(banned[i],count);
   }
     data.filtered = filter;
-  return data;
+  return JSON.stringify(data);
   }
 }
