@@ -21,6 +21,6 @@ count = count + "*";
       filter = filter.replace(banned[i],count);
   }
     data.filtered = filter;
-  return JSON.stringify(data);
+  return data;
   }
 }
