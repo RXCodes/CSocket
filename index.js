@@ -19,7 +19,6 @@ io.on('connection', function(socket) {
   socket.on('chat', function(data) {
     var output = filter.process(data);
     io.in(socket.room).emit('chat', output);
-    }
   });
   
   socket.on('event', function(data) {
