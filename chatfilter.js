@@ -1,4 +1,4 @@
-function chat(message, check) {
+exports.myDateTime = function (message, check) {
 
   var filter = message; 
   
