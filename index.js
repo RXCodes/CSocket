@@ -67,7 +67,7 @@ io.on('connection', function(socket) {
   });
   
   socket.on('change bg color', function(data) {
-    io.in(socket.room).emit('ping', data);
+    io.in(socket.room).emit('change bg color', data);
   });
   
   socket.on('room', function(data) {
