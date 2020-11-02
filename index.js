@@ -18,9 +18,11 @@ io.on('connection', function(socket) {
   
   socket.on('chat', function(data) {
     var data = JSON.parse(data);
-    var output = filter.process(data.message, data.words);
-    io.in(socket.room).emit('chat', output);
-      
+    if (typeof data != "undefined") {
+			if (typeof data.message != "undefined" && typeof data.words != "undefined") 
+      var output = filter.process(data.message, data.words);
+      io.in(socket.room).emit('chat', output);
+    }
     
   });
   
