@@ -1,5 +1,6 @@
-exports.process = function(message, check) {
-  if (typeof message != "undefined" && typeof check != "undefined") {
+exports.process = function(data) {
+  var dict = JSON.parse(data);
+  if (dict.hasOwnProperty("message") && dict.hasOwnProperty("words")) {
   var filter = message; 
   
   var banned = JSON.parse(check);
@@ -13,6 +14,7 @@ count = count + "*";
       var filter = filter.replace(re,count);
       filter = filter.replace(banned[i],count);
   }
-  return filter;
+    data["censored"] = filter;
+  return data;
   }
 }
