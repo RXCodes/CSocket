@@ -11,9 +11,6 @@ io.on('connection', function(socket) {
   socket.room = 'none';  
   
   socket.on('join', function(data) {
-if (typeof socket.join != 'undefined') {
-    socket.leave(socket.room);
-}
     socket.room = data;
     socket.join(data);
   });
