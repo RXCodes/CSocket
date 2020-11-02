@@ -1,39 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <script>
+function Load() {
+  console.log("loaded");
+   
+};
+
+</script>
   <head>
-    <title>Socket.IO chat</title>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-      #messages { margin-bottom: 40px }
+      html {
+    background-color: #1b6089;
+}
+      
+      body, html {
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        font: Arial 14px;
+      }
+      
+      .center {
+  display: block;
+  padding:5px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+      
+      #grad {
+        height: 1000px;
+        width: 1300px;
+        background-color: #3e8bff;
+        background-image: linear-gradient(to top, #144370 0.0%, #32a1ff 100.0%);
+        position: fixed;
+        top: 0;
+        right: -20;
+        z-index: -99999;
+      }
+      
+      
+        
+        @keyframes swing {
+  0%   {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    
+          }
+          
+  100%{
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+    }
+          }
+      
+
+      #title {
+    animation-name: swing; 
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+      }
+      
+      @keyframes bounce {
+        0% {transform: translate(0,10);
+        transform: scale(30%,30%);
+          -webkit-transform: translate(0,10);
+        -webkit-transform: scale(30%,30%);
+          -moz-transform: translate(0,10);
+        -moz-transform: scale(30%,30%);
+         -o-transform: translate(0,10);
+        -o-transform: scale(30%,30%);
+        }
+  100% {transform: translate(0,15);
+        transform: scale(40%,40%);
+        -webkit-transform: translate(0,15);
+        -webkit-transform: scale(40%,40%);
+        -moz-transform: translate(0,15);
+       -moz-transform: scale(40%,40%);
+        -o-transform: translate(0,15);
+       -o-transform: scale(40%,40%);
+        }
+        }
+
+        #test {
+animation-name: bounce; 
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+      
+.fadeIn {
+	animation-duration:2s;
+	animation-name:fadeIn;
+}
+      
     </style>
+    
   </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      $(function () {
-        var socket = io();
-        $('form').submit(function(){
-          socket.emit('chat message', $('#m').val());
-          $('#m').val('');
-          return false;
-        });
-        socket.on('chat message', function(msg){
-          $('#messages').append($('<li>').text(msg));
-          window.scrollTo(0, document.body.scrollHeight);
-        });
-      });
-    </script>
+  <body onload="Load()">
+    <div id="grad"></div>
+    <img src="https://botpixel-games.000webhostapp.com/title-logo.png"
+         width = 90% top = 100px z-index=2 class="center fadeIn" id=title>
+      <img src="https://botpixel-games.000webhostapp.com/online.png"
+         width = 30% z-index=3 id=test class=center>
+
+    
   </body>
+
+  
 </html>
