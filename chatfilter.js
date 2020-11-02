@@ -1,5 +1,5 @@
 exports.process = function(message, check) {
-  
+  if (typeof message != "undefined" && typeof check != "undefined") {
   var filter = message; 
   
   var banned = JSON.parse(check);
@@ -14,5 +14,5 @@ count = count + "*";
       filter = filter.replace(banned[i],count);
   }
   return filter;
-
+  }
 }
