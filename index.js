@@ -1,7 +1,6 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var chatbot = require('./chatbot.js');
 var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res){
@@ -53,11 +52,6 @@ io.on('connection', function(socket) {
   
   socket.on('words', function(data) {
     io.in(socket.room).emit('words', data);
-  });
-  
-  socket.on('chatbot', function(data) {
-    var output = chatbot.chat(data);
-    io.in(socket.room).emit('chatbot', output);
   });
   
   socket.on('next', function(data) {
