@@ -1,4 +1,4 @@
-exports.myDateTime = function (message, check) {
+exports.process = function(message, check) {
 
   var filter = message; 
   
