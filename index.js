@@ -18,7 +18,6 @@ io.on('connection', function(socket) {
   socket.on('chat', function(data) {
     data = JSON.parse(data);
     var filter = data;
-    if (typeof data.message != 'undefined') {
     var banned = JSON.parse(data.filter);
     for (i = 0; i < banned.length; i++) {
     var count = "";
@@ -35,7 +34,7 @@ io.on('connection', function(socket) {
     }
     io.in(socket.room).emit('chat', send);
       
-    }
+    
   });
   
   socket.on('event', function(data) {
