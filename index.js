@@ -16,14 +16,8 @@ io.on('connection', function(socket) {
   });
   
   socket.on('chat', function(data) {
-    data = JSON.parse(data);
-    var filter = data;
-    var banned = JSON.parse(data.filter);
-    var send = {
-      "original": data.message;
-      "filter": filter;
-    }
-    io.in(socket.room).emit('chat', send);
+    var data = JSON.parse(data);
+    io.in(socket.room).emit('chat', data);
       
     
   });
