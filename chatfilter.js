@@ -1,5 +1,5 @@
 exports.process = function(message, check) {
-
+  
   var filter = message; 
   
   var banned = JSON.parse(check);
