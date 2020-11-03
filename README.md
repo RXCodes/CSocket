@@ -23,13 +23,24 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 # Documentation
 Here are all the behaviors that are currently supported.
 
-## JSON Category
+## Global Storage Category *(3)*
+- `storage.store(variable, value);`
+> _Returns [BOOLEAN: success]_
+>> Declare / set a global variable.
+- `storage.retrieve(variable, default value);`
+> _Returns [BOOLEAN: success, STRING: variable]_
+>> Get the value of a global variable. Returns default value if variable does not exist.
+- `storage.remove(variable);`
+> _Returns [BOOLEAN: success]_
+>> Delete a global variable.
+
+## JSON Category *(17)*
 - `json.modify_dictionary_key(dictionary, key, value);`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 >> Set a key in a dictionary.
 - `json.get_dictionary_key(dictionary, key, default value);`
 > _Returns [STRING: value, BOOLEAN: success]_
->> Get a value of a key in a dictionary.
+>> Get a value of a key in a dictionary. Returns default value is key does not exist.
 - `json.delete_dictionary_key(dictionary, key);`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 >> Delete a key in a dictionary.
