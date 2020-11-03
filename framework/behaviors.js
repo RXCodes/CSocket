@@ -8,4 +8,5 @@ exports.modify_dictionary_key = function (dictionary, key, value) {
   }
   var dict = JSON.parse(dictionary);
   dict[key] = value;
+  return [dict, true];
 };
