@@ -2,7 +2,7 @@
 // Returns => JSON: dictionary, boolean: success
 exports.modify_dictionary_key = function (dictionary, key, value) {
   try {
-    var dict = JSON.parse(dictionary);
+    let dict = JSON.parse(dictionary);
     dict[key] = value;
     return [dict, true];
     
@@ -18,7 +18,7 @@ exports.modify_dictionary_key = function (dictionary, key, value) {
 // Returns => string: value, boolean: success
 exports.get_dictionary_key = function (dictionary, key, default_value) {
   try {
-    var dict = JSON.parse(dictionary);
+    let dict = JSON.parse(dictionary);
     return [dict[key], true];
   } catch (e) {
     return [default_value, false];
@@ -31,7 +31,7 @@ exports.get_dictionary_key = function (dictionary, key, default_value) {
 // Returns => JSON: dictionary, boolean: success
 exports.delete_dictionary_key = function (dictionary, key) {
   try {
-      var dict = JSON.parse(dictionary);
+      let dict = JSON.parse(dictionary);
   if dict.hasOwnProperty(key) {
     delete dict[key];
     return [dict, true];
@@ -57,8 +57,8 @@ return [dictionary, false];
 // SIDENOTE: Works for both arrays and dictionaries!
 exports.test_dictionary_key = function (dictionary, key) {
   try {
-    var dict = JSON.parse(dictionary);
-    if dict.hasOwnProperty(key) {
+    let dict = JSON.parse(dictionary);
+    if (dict.hasOwnProperty(key)) {
       return [true, true];
     }
   else {
@@ -68,7 +68,7 @@ exports.test_dictionary_key = function (dictionary, key) {
     return [false, false];
   }
   var dict = JSON.parse(dictionary);
-  if dict.hasOwnProperty(key) {
+  if (dict.hasOwnProperty(key)) {
     return [true, true];
   }
 else {
@@ -80,7 +80,7 @@ return [false, true];
 // Returns => JSON: array / dictionary, boolean: success
 exports.set_dictionary = function (dictionary, key) {
   try {
-var dict = JSON.parse(dictionary);
+let dict = JSON.parse(dictionary);
   for (var remove in dict) {
     if (dict.hasOwnProperty(remove)) {
         delete dict[remove];
@@ -101,7 +101,7 @@ var dict = JSON.parse(dictionary);
 // Returns => JSON: dictionary / array, boolean: success
 exports.set_json = function (dictionary) {
   try {
-    var dict = JSON.parse(dictionary);
+    let dict = JSON.parse(dictionary);
     return [dict, true];
   } catch (e) {
     return [dictionary, false];
@@ -114,7 +114,7 @@ exports.set_json = function (dictionary) {
 // Returns => JSON: array, boolean: success
 exports.append_value = function (array, value) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.push(value);
   return [dict, true];
   } catch (e) {
@@ -130,7 +130,7 @@ exports.append_value = function (array, value) {
 // Returns => JSON: array, boolean: success
 exports.insert_value = function (array, value, index) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.splice(index, 0, value);
   return [dict, true];
   } catch (e) {
@@ -146,7 +146,7 @@ exports.insert_value = function (array, value, index) {
 // Returns => JSON: array, boolean: success
 exports.replace_value = function (array, value, index) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.splice(index, 1, value);
   return [dict, true];
   } catch (e) {
@@ -162,7 +162,7 @@ exports.replace_value = function (array, value, index) {
 // Returns => JSON: array, boolean: success
 exports.sort_value = function (array) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.sort();
   return [dict, true];
   } catch (e) {
@@ -178,7 +178,7 @@ exports.sort_value = function (array) {
 // Returns => JSON: array, boolean: success
 exports.reverse_value = function (array) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.reverse();
   return [dict, true];
   } catch (e) {
@@ -194,7 +194,7 @@ exports.reverse_value = function (array) {
 // Returns => JSON: array, boolean: success
 exports.ascending_numeric_sort_value = function (array) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.sort(function(a, b){return a - b});
   return [dict, true];
   } catch (e) {
@@ -210,7 +210,7 @@ exports.ascending_numeric_sort_value = function (array) {
 // Returns => JSON: array, boolean: success
 exports.descending_numeric_sort_value = function (array) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.sort(function(a, b){return b - a});
   return [dict, true];
   } catch (e) {
@@ -226,7 +226,7 @@ exports.descending_numeric_sort_value = function (array) {
 // Returns => JSON: array, boolean: success
 exports.random_sort_value = function (array) {
   try {
-    var dict = JSON.parse(array);
+    let dict = JSON.parse(array);
   dict.sort(function(a, b){return 0.5 - Math.random()});
   return [dict, true];
   } catch (e) {
@@ -242,7 +242,7 @@ exports.random_sort_value = function (array) {
 // Returns => JSON: array, boolean: success
 exports.get_keys = function (dictionary) {
   try {
-    var dict = JSON.parse(dictionary);
+    let dict = JSON.parse(dictionary);
   Object.keys(dict);
   return [dict, true];
   } catch (e) {
