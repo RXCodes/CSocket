@@ -16,6 +16,10 @@ app.get('/', function(req, res){
 io.on('connection', function(socket) {
   socket.emit('game','you are now connected.');
   
+  socket.on('event', function(data) {
+    
+  }
+  
 });
 
 http.listen(port, function() {
