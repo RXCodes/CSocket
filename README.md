@@ -9,7 +9,5 @@ The code for all the "behaviors" is located in the `framework` folder. They are 
 
 This page only serves as a template -- do not use this project to create your own socket.io server! Compile your own project using **CSocket**!
 
-# JSON Category
-- `json.modify_dictionary_key(dictionary, key, value);`
-modifies a key of a dictionary
-**Returns**: [JSON: dictionary, BOOLEAN: success]
+# CSocket Compile Behavior System
+Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, you can see them in `framework`. It would be impractical to attempt to code it yourself, unless you are experienced.
