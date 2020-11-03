@@ -25,6 +25,12 @@ Here are all the behaviors that are currently supported.
 
 **JSON Category**
 - `json.modify_dictionary_key(dictionary, key, value)`
-Returns [JSON: dictionary, BOOLEAN: success]
-- `json.modify_dictionary_key(dictionary, key, value)`
-Returns [JSON: dictionary, BOOLEAN: success]
+_Returns [JSON: dictionary, BOOLEAN: success]_
+- `json.get_dictionary_key(dictionary, key, default value)`
+_Returns [JSON: dictionary, BOOLEAN: success]_
+- `json.delete_dictionary_key(dictionary, key)`
+_Returns [JSON: dictionary, BOOLEAN: success]_
+- `json.test_dictionary_key(dictionary, key)`
+_Returns [JSON: dictionary, BOOLEAN: success]_
+- `json.clear_json(dictionary, key, value)`
+_Returns [JSON: dictionary, BOOLEAN: success]_
