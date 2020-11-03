@@ -8,3 +8,6 @@ The code for all the "behaviors" is located in the `framework` folder. They are 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/RXCodes/CSocket/)
 
 This page only serves as a template -- do not use this project to create your own socket.io server! Compile your own project using **CSocket**!
+
+# JSON Category
+- `json.modify_dictionary_key(dictionary, key, value);` // modifies a key of a dictionary
