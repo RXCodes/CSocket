@@ -7,7 +7,7 @@ The code for all the "behaviors" is located in the `framework` folder. They are 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/RXCodes/CSocket/)
 
-This page only serves as a template -- do not use this project to create your own socket.io server! Compile your own project using **CSocket**!
+This page only serves as a template / example -- do not use this project to create your own socket.io server! Compile your own project using **CSocket**!
 
 # CSocket Compile Behavior System
 Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, you can see them in `framework`. It would be impractical to attempt to code it yourself, unless you are experienced.
