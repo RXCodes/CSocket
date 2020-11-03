@@ -78,7 +78,7 @@ return [false, true];
 
 // Delete All Values
 // Returns => JSON: array / dictionary, boolean: success
-exports.clear_json = function (dictionary, key) {
+exports.clear_json = function (dictionary) {
   try {
 let dict = JSON.parse(dictionary);
   for (var remove in dict) {
