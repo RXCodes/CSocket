@@ -32,7 +32,7 @@ exports.get_dictionary_key = function (dictionary, key, default_value) {
 exports.delete_dictionary_key = function (dictionary, key) {
   try {
       let dict = JSON.parse(dictionary);
-  if dict.hasOwnProperty(key) {
+  if (dict.hasOwnProperty(key)) {
     delete dict[key];
     return [dict, true];
   }
@@ -43,7 +43,7 @@ else {
     return [dictionary, false];
   }
   var dict = JSON.parse(dictionary);
-  if dict.hasOwnProperty(key) {
+  if (dict.hasOwnProperty(key)) {
     delete dict[key];
     return [dict, true];
   }
