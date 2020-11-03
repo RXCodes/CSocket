@@ -19,11 +19,11 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 - All behaviors directly don't modify anything, but provide an output which can be used in other behaviors. *(eg. modifying a dictionary THEN storing it into a variable -- this action requires 2 seperate behaviors.)*
 - All behaviors are designed to be crash-proof, so any errors that come by are ignored.
 
-All behaviors output an ARRAY of important information -- refer to the documentation below!
+**All behaviors output an ARRAY of important information -- refer to the documentation below!**
 # Documentation
 Here are all the behaviors that are currently supported.
 
-**JSON Category**
+## JSON Category
 - `json.modify_dictionary_key(dictionary, key, value)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 - `json.get_dictionary_key(dictionary, key, default value)`
@@ -32,5 +32,7 @@ Here are all the behaviors that are currently supported.
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 - `json.test_dictionary_key(dictionary, key)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
-- `json.clear_json(dictionary, key, value)`
+- `json.clear_json(dictionary)`
+> _Returns [JSON: dictionary, BOOLEAN: success]_
+- `json.set_json(dictionary)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
