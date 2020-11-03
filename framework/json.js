@@ -1,5 +1,5 @@
 // Modify Dictionary Key
-// Returns => dictionary: dictionary, boolean: if successfully executed
+// Returns => JSON: dictionary, boolean: success
 exports.modify_dictionary_key = function (dictionary, key, value) {
   try {
     JSON.parse(dictionary);
@@ -12,7 +12,7 @@ exports.modify_dictionary_key = function (dictionary, key, value) {
 };
 
 // Get Dictionary Key
-// Returns => string: value, boolean: is successfully executed
+// Returns => string: value, boolean: success
 exports.get_dictionary_key = function (dictionary, key, default_value) {
   try {
     JSON.parse(dictionary);
@@ -24,7 +24,7 @@ exports.get_dictionary_key = function (dictionary, key, default_value) {
 };
 
 // Delete Dictionary Key
-// Returns => dictionary: dictionary, boolean: if successfully executed
+// Returns => JSON: dictionary, boolean: success
 exports.delete_dictionary_key = function (dictionary, key) {
   try {
     JSON.parse(dictionary);
@@ -38,5 +38,22 @@ exports.delete_dictionary_key = function (dictionary, key) {
   }
 else {
 return [dictionary, false];
-}
+ }
+};
+
+// Test for Key
+// Returns => boolean: condition, boolean: success
+exports.test_dictionary_key = function (dictionary, key) {
+  try {
+    JSON.parse(dictionary);
+  } catch (e) {
+    return [false, false];
+  }
+  var dict = JSON.parse(dictionary);
+  if dict.hasOwnProperty(key) {
+    return [true, true];
+  }
+else {
+return [false, true];
+ }
 };
