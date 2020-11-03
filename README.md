@@ -21,7 +21,7 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 
 **All behaviors output an ARRAY of important information -- refer to the documentation below!**
 # Documentation
-Here are all the behaviors that are currently supported.
+Here are all the behaviors that are currently supported in **CSocket**. Behaviors marked with **🟢** are **fully supported** in both the **CSocket Behavior Editor** and the server itself when compiled.
 
 ## Global Storage Category *(4)*
 - `storage.store(variable, value);`
