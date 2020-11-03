@@ -21,6 +21,7 @@ count = count + "*";
       filter = filter.replace(banned[i],count);
   }
     data.filtered = filter;
+    delete data.words;
   return data;
   }
 }
