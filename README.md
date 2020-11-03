@@ -10,4 +10,6 @@ The code for all the "behaviors" is located in the `framework` folder. They are 
 This page only serves as a template -- do not use this project to create your own socket.io server! Compile your own project using **CSocket**!
 
 # JSON Category
-- `json.modify_dictionary_key(dictionary, key, value);` // modifies a key of a dictionary
+- `json.modify_dictionary_key(dictionary, key, value);`
+modifies a key of a dictionary
+**Returns**: [JSON: dictionary, BOOLEAN: success]
