@@ -76,7 +76,7 @@ Here are all the behaviors that are currently supported in **CSocket**. Behavior
 > _Returns [JSON: dictionary / array, BOOLEAN: success]_
 >> Converts a string into JSON. (array / dictionary)
 - `json.convert_from_json(dictionary / array);`
-> _Returns [JSON: string, BOOLEAN: success]_
+> _Returns [STRING: json, BOOLEAN: success]_
 >> Converts a JSON object into a string.
 - `json.append_value(array, string / array);`
 > _Returns [JSON: array, BOOLEAN: success]_
