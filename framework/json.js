@@ -141,3 +141,19 @@ exports.append_value = function (array, value, index) {
   return [dict, true];
 
 };
+
+// Replace value in Array
+// Returns => JSON: array, boolean: success
+exports.append_value = function (array, value, index) {
+  try {
+    var dict = JSON.parse(array);
+  dict.splice(index, 1, value);
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.splice(index, 1, value);
+  return [dict, true];
+
+};
