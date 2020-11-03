@@ -128,7 +128,7 @@ exports.append_value = function (array, value) {
 
 // Insert value in Array
 // Returns => JSON: array, boolean: success
-exports.append_value = function (array, value, index) {
+exports.insert_value = function (array, value, index) {
   try {
     var dict = JSON.parse(array);
   dict.splice(index, 0, value);
@@ -144,7 +144,7 @@ exports.append_value = function (array, value, index) {
 
 // Replace value in Array
 // Returns => JSON: array, boolean: success
-exports.append_value = function (array, value, index) {
+exports.replace_value = function (array, value, index) {
   try {
     var dict = JSON.parse(array);
   dict.splice(index, 1, value);
@@ -154,6 +154,70 @@ exports.append_value = function (array, value, index) {
   }
   var dict = JSON.parse(array);
   dict.splice(index, 1, value);
+  return [dict, true];
+
+};
+
+// Sort Array
+// Returns => JSON: array, boolean: success
+exports.sort_value = function (array, value, index) {
+  try {
+    var dict = JSON.parse(array);
+  dict.sort();
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.sort();
+  return [dict, true];
+
+};
+
+// Reverse Array
+// Returns => JSON: array, boolean: success
+exports.reverse_value = function (array, value, index) {
+  try {
+    var dict = JSON.parse(array);
+  dict.reverse();
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.reverse();
+  return [dict, true];
+
+};
+
+// Ascending Numeric Sort Array
+// Returns => JSON: array, boolean: success
+exports.ascending_numeric_sort_value = function (array, value, index) {
+  try {
+    var dict = JSON.parse(array);
+  dict.sort(function(a, b){return a - b});
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.sort(function(a, b){return a - b});
+  return [dict, true];
+
+};
+
+// Descending Numeric Sort Array
+// Returns => JSON: array, boolean: success
+exports.descending_numeric_sort_value = function (array, value, index) {
+  try {
+    var dict = JSON.parse(array);
+  dict.sort(function(a, b){return b - a});
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.sort(function(a, b){return b - a});
   return [dict, true];
 
 };
