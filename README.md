@@ -54,6 +54,12 @@ Here are all the behaviors that are currently supported.
 - `json.replace_value(array, string, index);`
 > _Returns [JSON: array, BOOLEAN: success]_
 >> Replace a value in specified index with an another value in an array.
+- `json.pop(array);`
+> _Returns [JSON: array, BOOLEAN: success]_
+>> Removes the value at the last index in an array.
+- `json.delete_index(array, index);`
+> _Returns [JSON: array, BOOLEAN: success]_
+>> Removes a value at a specified index in an array.
 - `json.sort_array(array);`
 > _Returns [JSON: array, BOOLEAN: success]_
 >> Alphabetically sort an array.
