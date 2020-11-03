@@ -24,7 +24,7 @@ exports.retrieve = function (variable, default_value) {
 
 // delete a global variable
 exports.delete = function (variable) {
-  if !(storage.variable === undefined) {
+  if (storage.variable !== undefined) {
 	delete storage[variable];
 	return true;
 	} else
@@ -33,7 +33,7 @@ exports.delete = function (variable) {
 
 // check if global variable exists
 exports.check = function (variable) {
-  if !(storage.variable === undefined) {
+  if !(storage.variable !== undefined) {
 	return true;
 	} else
   return false;
