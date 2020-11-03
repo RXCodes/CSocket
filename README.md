@@ -29,7 +29,7 @@ Here are all the behaviors that are currently supported.
 >> Declare / set a global variable.
 - `storage.retrieve(variable, default value);`
 > _Returns [BOOLEAN: success, STRING: variable]_
->> Get the value of a global variable. Returns default value if variable does not exist or if behavior failed to execute.
+>> Get the value of a global variable. Returns default value if variable does not exist.
 - `storage.remove(variable);`
 > _Returns [BOOLEAN: success]_
 >> Delete a global variable.
@@ -41,6 +41,18 @@ Here are all the behaviors that are currently supported.
 - `json.get_dictionary_key(dictionary, key, default value);`
 > _Returns [STRING: value, BOOLEAN: success]_
 >> Get a value of a key in a dictionary. Returns default value is key does not exist.
+- `json.get_array_count(array);`
+> _Returns [INTEGER: count, BOOLEAN: success]_
+>> Get the amount of items in an array.
+- `json.get_array_value(array, index, default value);`
+> _Returns [STRING: value, BOOLEAN: success]_
+>> Get a value by the specified index in an array.
+- `json.get_first_array_value(array, default value);`
+> _Returns [STRING: value, BOOLEAN: success]_
+>> Get the value by the first index in an array.
+- `json.get_last_array_value(array, default value);`
+> _Returns [STRING: value, BOOLEAN: success]_
+>> Get a value by the last index in an array.
 - `json.delete_dictionary_key(dictionary, key);`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 >> Delete a key in a dictionary.
