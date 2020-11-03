@@ -97,3 +97,16 @@ var dict = JSON.parse(dictionary);
     }
 }
 };
+
+// Set JSON
+// Returns => JSON: dictionary / array, boolean: success
+exports.set_json = function (dictionary) {
+  try {
+    var dict = JSON.parse(dictionary);
+    return [dict, true];
+  } catch (e) {
+    return [dictionary, false];
+  }
+  var dict = JSON.parse(dictionary);
+  return [dict, true];
+};
