@@ -21,7 +21,7 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 
 **All behaviors output an ARRAY of important information -- refer to the documentation below!** A behavior output can be referenced by storing it inside a variable and getting an index from it.
 
-### **eg.**
+### **example:**
 > ``let output = behavior_function();``
 > ``let example = output[0];``
 # Documentation
