@@ -110,7 +110,7 @@ exports.set_json = function (dictionary) {
   return [dict, true];
 };
 
-// Append value to Array
+// Append value(s) to Array
 // Returns => JSON: array, boolean: success
 exports.append_value = function (array, value) {
   try {
