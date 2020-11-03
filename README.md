@@ -29,7 +29,7 @@ Here are all the behaviors that are currently supported.
 >> Declare / set a global variable.
 - `storage.retrieve(variable, default value);`
 > _Returns [BOOLEAN: success, STRING: variable]_
->> Get the value of a global variable. Returns default value if variable does not exist.
+>> Get the value of a global variable. Returns default value if variable does not exist or if behavior failed to execute.
 - `storage.remove(variable);`
 > _Returns [BOOLEAN: success]_
 >> Delete a global variable.
