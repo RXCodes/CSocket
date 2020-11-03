@@ -1,4 +1,4 @@
-# [What is CSocket?]
+# What is CSocket?
 **CSocket** allows users to easily program their own *Socket.io* server using visual coding; just like how hyperPad provides visual coding for creating apps and games. Users do not need to worry about coding at all, and it is completely free to deploy!
 
 ### Current Status
@@ -23,7 +23,7 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 **eg.**
 > ``let output = behavior_function();``
 > ``let example = output[0]``
-# [Documentation]
+# Documentation
 Here are all the behaviors that are currently supported in **CSocket**. Behaviors marked with **🟢** are **fully supported** in both the **CSocket Behavior Editor** and the server itself when compiled.
 
 ## Global Storage Category *(4)*
