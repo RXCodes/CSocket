@@ -1,5 +1,5 @@
 # Current Status
-**CSocket** is not available in hyperPad yet. I am working with the behavior system and the compile feature.
+**CSocket** is not available in hyperPad yet, nor is it complete! I am currently working with the behavior system and the compile feature. I've only started, *(Nov 3, 2020)* and I cannot promise that this project will be successful.
 
 # CSocket Documentation
 
