@@ -17,10 +17,18 @@ io.on('connection', function(socket) {
   socket.emit('game','you are now connected.');
   
   socket.on('event', function(data) {
-    let behavior_output = json.modify_dictionary_key("test","key");
-    storage.store("dictionary", behavior_output["dictionary"]);
-    socket.emit('output', behavior_output["dictionary"]);
-  }
+    let init = storage.retrieve("dictionary", {});
+    let behavior_output = json.modify_dictionary_key(init,"test","key");
+    storage.store("dictionary", behavior_output[0]);
+    socket.emit('output', behavior_output[0]);
+  });
+            
+  socket.on('event2', function(data) {
+    let init = storage.retrieve("dictionary", {});
+    let behavior_output = json.delete_dictionary_key(init,"test");
+    storage.store("dictionary", behavior_output[0]);
+    socket.emit('output', behavior_output[0]);
+  });
   
 });
 
