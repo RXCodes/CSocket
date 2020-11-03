@@ -1,3 +1,6 @@
+## What is CSocket?
+**CSocket** allows users to easily program their own *Socket.io* server using visual coding; just like how hyperPad provides visual coding for creating apps and games. Users do not need to worry about coding at all, and it is completely free to deploy!
+
 # Current Status
 **CSocket** is not available in hyperPad yet, nor is it complete! I am currently working with the behavior system and the compile feature. I've only started, *(Nov 3, 2020)* and I cannot promise that this project will be successful.
 
@@ -9,9 +12,9 @@ The code for all the "behaviors" is located in the `framework` folder. They are 
 
 This page only serves as a template / example -- do not use this project to create your own socket.io server! Compile your own project using **CSocket**!
 
-# CSocket Compile Behavior System
+# CSocket Behavior System
 Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, you can see them in `framework`. It would be impractical to attempt to code it yourself, unless you are experienced.
 
-- All behaviors return a boolean of if execution was successful.
+- All behaviors return a boolean of if execution was successful. *(returns false when a behavior has failed to execute.)*
 - All behaviors directly don't modify anything, but provide an output which can be used in other behaviors. *(eg. modifying a dictionary THEN storing it into a variable -- this action requires 2 seperate behaviors.)*
 - All behaviors are designed to be crash-proof, so any errors that come by are ignored.
