@@ -23,5 +23,5 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 Here are all the behaviors that are currently supported.
 
 **JSON Category**
-- `json.modify_dictionary_key(dictionary, key, value)`;
-// Returns [JSON: dictionary, BOOLEAN: success]
+- json.modify_dictionary_key(dictionary, key, value)
+Returns [JSON: dictionary, BOOLEAN: success]
