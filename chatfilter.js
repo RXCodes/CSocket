@@ -20,8 +20,8 @@ count = count + "*";
       var filter = filter.replace(re,count);
       filter = filter.replace(banned[i],count);
   }
-    data.filtered = filter;
-    delete data.words;
-  return data;
+    dict.filtered = filter;
+    delete dict.words;
+  return dict;
   }
 }
