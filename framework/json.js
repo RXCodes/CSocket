@@ -269,3 +269,20 @@ exports.pop = function (array) {
   return [dict, true];
 
 };
+
+// Remove Index from Array
+// Returns => JSON: array, boolean: success
+exports.delete_index = function (array, index) {
+  try {
+    let dict = JSON.parse(array);
+  dict.splice(index, array);
+
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.splice(index, array);
+  return [dict, true];
+
+};
