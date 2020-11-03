@@ -34,7 +34,7 @@ Here are all the behaviors that are currently supported.
 > _Returns [BOOLEAN: success]_
 >> Delete a global variable.
 
-## JSON Category *(17)*
+## JSON Category *(21)*
 - `json.modify_dictionary_key(dictionary, key, value);`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 >> Set a key in a dictionary.
