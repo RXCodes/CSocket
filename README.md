@@ -22,7 +22,7 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 **All behaviors output an ARRAY of important information -- refer to the documentation below!** A behavior output can be referenced by storing it inside a variable and getting an index from it.
 **eg.**
 > ``let output = behavior_function();``
-> ``let example = output[0]``
+> ``let example = output[0];``
 # Documentation
 Here are all the behaviors that are currently supported in **CSocket**. Behaviors marked with **🟢** are **fully supported** in both the **CSocket Behavior Editor** and the server itself when compiled.
 
