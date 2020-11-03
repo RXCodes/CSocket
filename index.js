@@ -2,7 +2,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
-var behavior = require('./framework/behaviors');
+var json_behavior = require('./framework/json');
 // var (handler) = require('./folder/file_name');
 
 app.get('/', function(req, res){
