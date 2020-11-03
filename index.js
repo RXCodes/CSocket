@@ -6,8 +6,8 @@ var json = require('./framework/json');
 var storage = require('./framework/memory');
 
 // global variables
-storage.store("dictionary",{})
-storage.store("array",{})
+storage.store("dictionary",{});
+storage.store("array",{});
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -23,14 +23,14 @@ io.on('connection', function(socket) {
     socket.emit('output', behavior_output[0]);
   });
             
-  socket.on('event2', function(data) {
+  socket.on('event2', function() {
     let init = storage.retrieve("dictionary", {});
     let behavior_output = json.delete_dictionary_key(init,"test");
     storage.store("dictionary", behavior_output[0]);
     socket.emit('output', behavior_output[0]);
   });
   
-  socket.on('event3', function(data) {
+  socket.on('event3', function() {
     let init = storage.retrieve("dictionary", {});
     let behavior_output = json.get_dictionary_key(init,"test","none");
     storage.store("dictionary", behavior_output[0]);
