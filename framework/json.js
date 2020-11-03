@@ -75,3 +75,25 @@ else {
 return [false, true];
  }
 };
+
+// Delete All Values
+// Returns => JSON: array / dictionary, boolean: success
+exports.set_dictionary = function (dictionary, key) {
+  try {
+var dict = JSON.parse(dictionary);
+  for (var remove in dict) {
+    if (dict.hasOwnProperty(remove)) {
+        delete dict[remove];
+    }
+}
+   }
+  } catch (e) {
+    return [false];
+  }
+  var dict = JSON.parse(dictionary);
+  for (var remove in dict) {
+    if (dict.hasOwnProperty(remove)) {
+        delete dict[remove];
+    }
+}
+};
