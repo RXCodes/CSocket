@@ -23,10 +23,10 @@ exports.retrieve = function (variable, default_value) {
 }
 
 // delete a global variable
-exports.delete = function (variable) {
+exports.remove = function (variable) {
   if (storage.hasOwnProperty(variable)) {
 	delete storage[variable];
 	return true;
 	} else
-		return false;
+  return false;
 }
