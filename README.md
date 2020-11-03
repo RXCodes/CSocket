@@ -1,5 +1,5 @@
 # What is CSocket?
-**CSocket** allows users to easily program their own *Socket.io* server using visual coding; just like how hyperPad provides visual coding for creating apps and games. Users do not need to worry about coding at all, and it is completely free to deploy!
+**CSocket** allows users to easily program their own *Socket.io* server using visual code; just like how hyperPad provides visual coding for creating apps and games. Users do not need to worry about syntaxes and errors at all, and it is completely free to deploy!
 
 ### Current Status
 **CSocket** is not available in hyperPad yet, nor is it complete! I am currently working with the behavior system and the compile feature. I've only started, *(Nov 3, 2020)* and I cannot promise that this project will be successful.
