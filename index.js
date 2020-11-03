@@ -17,7 +17,9 @@ io.on('connection', function(socket) {
   socket.emit('game','you are now connected.');
   
   socket.on('event', function(data) {
-    
+    let behavior_output = json.modify_dictionary_key("test","key");
+    storage.store("dictionary", behavior_output["dictionary"]);
+    socket.emit('output', behavior_output["dictionary"]);
   }
   
 });
