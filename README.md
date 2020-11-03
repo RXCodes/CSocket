@@ -19,7 +19,10 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 - All behaviors directly don't modify anything, but provide an output which can be used in other behaviors. *(eg. modifying a dictionary THEN storing it into a variable -- this action requires 2 seperate behaviors.)*
 - All behaviors are designed to be crash-proof, so any errors that come by are ignored.
 
-**All behaviors output an ARRAY of important information -- refer to the documentation below!**
+**All behaviors output an ARRAY of important information -- refer to the documentation below!** A behavior output can be referenced by storing it inside a variable and getting an index from it.
+**eg.**
+> ``let output = behavior_function();``
+> 
 # Documentation
 Here are all the behaviors that are currently supported in **CSocket**. Behaviors marked with **🟢** are **fully supported** in both the **CSocket Behavior Editor** and the server itself when compiled.
 
