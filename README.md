@@ -33,6 +33,9 @@ Here are all the behaviors that are currently supported.
 - `json.delete_dictionary_key(dictionary, key);`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 >> Delete a key in a dictionary.
+- `json.get_keys(dictionary);`
+> _Returns [JSON: array, BOOLEAN: success]_
+>> Returns an array of keys in a dictionary.
 - `json.test_dictionary_key(dictionary / array, key);`
 > _Returns [BOOLEAN: condition, BOOLEAN: success]_
 >> Test if a key exists in a dictionary / array.
@@ -54,3 +57,15 @@ Here are all the behaviors that are currently supported.
 - `json.sort_array(array);`
 > _Returns [JSON: array, BOOLEAN: success]_
 >> Alphabetically sort an array.
+- `json.reverse_array(array);`
+> _Returns [JSON: array, BOOLEAN: success]_
+>> Reverse an array.
+- `json.ascending_numeric_sort_array(array);`
+> _Returns [JSON: array, BOOLEAN: success]_
+>> Sorts an array by numerical order in ascending fashion.
+- `json.descending_numeric_sort_array(array);`
+> _Returns [JSON: array, BOOLEAN: success]_
+>> Sorts an array by numerical order in descending fashion.
+- `json.random_sort_array(array);`
+> _Returns [JSON: array, BOOLEAN: success]_
+>> Shuffles the array randomly.
