@@ -72,9 +72,9 @@ Here are all the behaviors that are currently supported in **CSocket**. Behavior
 - `json.clear_json(dictionary / array);`
 > _Returns [JSON: dictionary / array, BOOLEAN: success]_
 >> Clear the contents of a dictionary / array.
-- `json.set_json(dictionary / array);`
+- `json.convert_to_json(dictionary / array);`
 > _Returns [JSON: dictionary / array, BOOLEAN: success]_
->> Set the contents of a dictionary / array.
+>> Converts a string into JSON. (array / dictionary)
 - `json.append_value(array, string / array);`
 > _Returns [JSON: array, BOOLEAN: success]_
 >> Append value(s) in an array.
