@@ -16,6 +16,7 @@ app.get('/', function(req, res){
 io.on('connection', function(socket) {
   socket.emit('game','you are now connected.');
   
+  // Set Key in Dictionary
   socket.on('event', function(data) {
     let init = storage.retrieve("dictionary", {});
     let behavior_output = json.modify_dictionary_key(init,"test",data);
@@ -23,6 +24,7 @@ io.on('connection', function(socket) {
     socket.emit('output', behavior_output[0]);
   });
             
+  // Delete Key in Dictionary
   socket.on('event2', function() {
     let init = storage.retrieve("dictionary", {});
     let behavior_output = json.delete_dictionary_key(init,"test");
@@ -30,6 +32,7 @@ io.on('connection', function(socket) {
     socket.emit('output', behavior_output[0]);
   });
   
+  // Get Key in Dictionary
   socket.on('event3', function() {
     let init = storage.retrieve("dictionary", {});
     let behavior_output = json.get_dictionary_key(init,"test","none");
