@@ -18,3 +18,5 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 - All behaviors return a boolean of if execution was successful. *(returns false when a behavior has failed to execute.)*
 - All behaviors directly don't modify anything, but provide an output which can be used in other behaviors. *(eg. modifying a dictionary THEN storing it into a variable -- this action requires 2 seperate behaviors.)*
 - All behaviors are designed to be crash-proof, so any errors that come by are ignored.
+
+# Documentation
