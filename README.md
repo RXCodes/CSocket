@@ -19,9 +19,12 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 - All behaviors directly don't modify anything, but provide an output which can be used in other behaviors. *(eg. modifying a dictionary THEN storing it into a variable -- this action requires 2 seperate behaviors.)*
 - All behaviors are designed to be crash-proof, so any errors that come by are ignored.
 
+All behaviors output an ARRAY of important information -- refer to the documentation below!
 # Documentation
 Here are all the behaviors that are currently supported.
 
 **JSON Category**
-- json.modify_dictionary_key(dictionary, key, value)
+- `json.modify_dictionary_key(dictionary, key, value)`
+Returns [JSON: dictionary, BOOLEAN: success]
+- `json.modify_dictionary_key(dictionary, key, value)`
 Returns [JSON: dictionary, BOOLEAN: success]
