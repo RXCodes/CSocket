@@ -20,3 +20,4 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 - All behaviors are designed to be crash-proof, so any errors that come by are ignored.
 
 # Documentation
+`**json**.modify_dictionary_key`
