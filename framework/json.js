@@ -84,10 +84,9 @@ var dict = JSON.parse(dictionary);
   for (var remove in dict) {
     if (dict.hasOwnProperty(remove)) {
         delete dict[remove];
+      }
     }
-}
-   }
-  } catch (e) {
+} catch (e) {
     return [false];
   }
   var dict = JSON.parse(dictionary);
