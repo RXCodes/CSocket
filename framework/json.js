@@ -158,9 +158,9 @@ exports.replace_value = function (array, value, index) {
 
 };
 
-// Sort Array
+// Alphabetically Sort Array
 // Returns => JSON: array, boolean: success
-exports.sort_value = function (array, value, index) {
+exports.sort_value = function (array) {
   try {
     var dict = JSON.parse(array);
   dict.sort();
@@ -176,7 +176,7 @@ exports.sort_value = function (array, value, index) {
 
 // Reverse Array
 // Returns => JSON: array, boolean: success
-exports.reverse_value = function (array, value, index) {
+exports.reverse_value = function (array) {
   try {
     var dict = JSON.parse(array);
   dict.reverse();
@@ -192,7 +192,7 @@ exports.reverse_value = function (array, value, index) {
 
 // Ascending Numeric Sort Array
 // Returns => JSON: array, boolean: success
-exports.ascending_numeric_sort_value = function (array, value, index) {
+exports.ascending_numeric_sort_value = function (array) {
   try {
     var dict = JSON.parse(array);
   dict.sort(function(a, b){return a - b});
@@ -208,7 +208,7 @@ exports.ascending_numeric_sort_value = function (array, value, index) {
 
 // Descending Numeric Sort Array
 // Returns => JSON: array, boolean: success
-exports.descending_numeric_sort_value = function (array, value, index) {
+exports.descending_numeric_sort_value = function (array) {
   try {
     var dict = JSON.parse(array);
   dict.sort(function(a, b){return b - a});
@@ -218,6 +218,22 @@ exports.descending_numeric_sort_value = function (array, value, index) {
   }
   var dict = JSON.parse(array);
   dict.sort(function(a, b){return b - a});
+  return [dict, true];
+
+};
+
+// Random Sort Array
+// Returns => JSON: array, boolean: success
+exports.random_sort_value = function (array) {
+  try {
+    var dict = JSON.parse(array);
+  dict.sort(function(a, b){return 0.5 - Math.random()});
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.sort(function(a, b){return 0.5 - Math.random()});
   return [dict, true];
 
 };
