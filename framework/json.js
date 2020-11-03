@@ -125,3 +125,19 @@ exports.append_value = function (array, value) {
   return [dict, true];
 
 };
+
+// Insert value in Array
+// Returns => JSON: array, boolean: success
+exports.append_value = function (array, value, index) {
+  try {
+    var dict = JSON.parse(array);
+  dict.splice(index, 0, value);
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.splice(index, 0, value);
+  return [dict, true];
+
+};
