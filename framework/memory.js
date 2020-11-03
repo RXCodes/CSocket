@@ -17,9 +17,9 @@ exports.retrieve = function (variable, default_value) {
   try {
     return storage[variable];
   } catch (e) {
-    return default_value;
+    return [true, default_value];
 	}
-	return storage[variable];
+	return [true, storage[variable]];
 };
 
 // delete a global variable
