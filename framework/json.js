@@ -110,6 +110,19 @@ exports.convert_to_json = function (dictionary) {
   return [dict, true];
 };
 
+// Set JSON from string
+// Returns => STRING: dictionary / array, boolean: success
+exports.convert_from_json = function (dictionary) {
+  try {
+    let dict = JSON.stringy(dictionary);
+    return [dict, true];
+  } catch (e) {
+    return [dictionary, false];
+  }
+  var dict = JSON.stringify(dictionary);
+  return [dict, true];
+};
+
 // Append value(s) to Array
 // Returns => JSON: array, boolean: success
 exports.append_value = function (array, value) {
