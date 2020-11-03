@@ -43,6 +43,7 @@ return [dictionary, false];
 
 // Test for Key
 // Returns => boolean: condition, boolean: success
+// SIDENOTE: Works for both arrays and dictionaries!
 exports.test_dictionary_key = function (dictionary, key) {
   try {
     JSON.parse(dictionary);
