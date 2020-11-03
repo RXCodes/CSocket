@@ -3,14 +3,13 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 var json_behavior = require('./framework/json');
-// var (handler) = require('./folder/file_name');
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection', function(socket) {
-  // insert code here
+  socket.emit('game','you are now connected.');
 });
 
 http.listen(port, function() {
