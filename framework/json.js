@@ -253,3 +253,19 @@ exports.get_keys = function (dictionary) {
   return [dict, true];
 
 };
+
+// Remove Last Index from Array
+// Returns => JSON: array, boolean: success
+exports.pop = function (array) {
+  try {
+    let dict = JSON.parse(array);
+  dict.pop();
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.pop();
+  return [dict, true];
+
+};
