@@ -114,7 +114,7 @@ exports.convert_to_json = function (dictionary) {
 // Returns => STRING: dictionary / array, boolean: success
 exports.convert_from_json = function (dictionary) {
   try {
-    let dict = JSON.stringy(dictionary);
+    let dict = JSON.stringify(dictionary);
     return [dict, true];
   } catch (e) {
     return [dictionary, false];
