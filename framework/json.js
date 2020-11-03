@@ -99,7 +99,7 @@ let dict = dictionary;
 
 // Set JSON from string
 // Returns => JSON: dictionary / array, boolean: success
-exports.set_json = function (dictionary) {
+exports.convert_to_json = function (dictionary) {
   try {
     let dict = JSON.parse(dictionary);
     return [dict, true];
