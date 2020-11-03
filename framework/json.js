@@ -286,3 +286,59 @@ exports.delete_index = function (array, index) {
   return [dict, true];
 
 };
+
+// Get Array Count
+// Returns => integer: count, boolean: success
+exports.count = function (array) {
+  try {
+    let dict = JSON.parse(array);
+  return [dict.length(), true];
+  } catch (e) {
+    return [0, false];
+  }
+  var dict = JSON.parse(array);
+  return [dict.length(), true];
+
+};
+
+// Get Array Value by Index
+// Returns => string: value, boolean: success
+exports.get_array_value = function (array, index, default_value) {
+  try {
+    let dict = JSON.parse(array);
+  return [dict[index], true];
+  } catch (e) {
+    return [default_value, true];
+  }
+  var dict = JSON.parse(array);
+  return [dict[index], true];
+
+};
+
+// Get First Array Value
+// Returns => string: value, boolean: success
+exports.get_first_array_value = function (array, default_value) {
+  try {
+    let dict = JSON.parse(array);
+  return [dict[0], true];
+  } catch (e) {
+    return [default_value, true];
+  }
+  var dict = JSON.parse(array);
+  return [dict[0], true];
+
+};
+
+// Get Last Array Value
+// Returns => string: value, boolean: success
+exports.get_first_array_value = function (array, default_value) {
+  try {
+    let dict = JSON.parse(array);
+  return [dict[dict.length() - 1], true];
+  } catch (e) {
+    return [default_value, true];
+  }
+  var dict = JSON.parse(array);
+  return [dict[dict.length() - 1], true];
+
+};
