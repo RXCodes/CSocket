@@ -22,6 +22,6 @@ count = count + "*";
   }
     dict.filtered = filter;
     delete dict.words;
-  return dict;
+  return JSON.stringify(dict);
   }
 }
