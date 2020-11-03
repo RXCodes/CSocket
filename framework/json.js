@@ -237,3 +237,19 @@ exports.random_sort_value = function (array) {
   return [dict, true];
 
 };
+
+// Get Key Values
+// Returns => JSON: array, boolean: success
+exports.get_keys = function (dictionary) {
+  try {
+    var dict = JSON.parse(dictionary);
+  Object.keys(dict);
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  Object.keys(dict);
+  return [dict, true];
+
+};
