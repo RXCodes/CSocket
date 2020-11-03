@@ -36,7 +36,13 @@ io.on('connection', function(socket) {
   socket.on('event3', function() {
     let init = storage.retrieve("dictionary", {});
     let behavior_output = json.get_dictionary_key(init,"test","none");
-    storage.store("dictionary", behavior_output[0]);
+    socket.emit('output', behavior_output[0]);
+  });
+
+  // Stringify JSON
+  socket.on('stringify', function() {
+    let init = storage.retrieve("dictionary", {});
+    let behavior_output = json.convert_from_json(init);
     socket.emit('output', behavior_output[0]);
   });
   
