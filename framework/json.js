@@ -32,5 +32,11 @@ exports.delete_dictionary_key = function (dictionary, key) {
     return [dictionary, false];
   }
   var dict = JSON.parse(dictionary);
-  return [dict[key], true];
+  if dict.hasOwnProperty(key) {
+    delete dict[key];
+  return [dict, true];
+  }
+else {
+return [dictionary, false];
+}
 };
