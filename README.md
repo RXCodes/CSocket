@@ -26,19 +26,19 @@ Here are all the behaviors that are currently supported.
 ## JSON Category
 - `json.modify_dictionary_key(dictionary, key, value)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
-Set a key in a dictionary.
+>> Set a key in a dictionary.
 - `json.get_dictionary_key(dictionary, key, default value)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
-Get a value of a key in a dictionary.
+>> Get a value of a key in a dictionary.
 - `json.delete_dictionary_key(dictionary, key)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
-Delete a key in a dictionary.
+>> Delete a key in a dictionary.
 - `json.test_dictionary_key(dictionary / array, key)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
-Test if a key exists in a dictionary / array.
+>> Test if a key exists in a dictionary / array.
 - `json.clear_json(dictionary / array)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
-Clear the contents of a dictionary / array.
+>> Clear the contents of a dictionary / array.
 - `json.set_json(dictionary / array)`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
-Set the contents of a dictionary / array.
+>> Set the contents of a dictionary / array.
