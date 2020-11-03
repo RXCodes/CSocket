@@ -109,3 +109,19 @@ exports.set_json = function (dictionary) {
   var dict = JSON.parse(dictionary);
   return [dict, true];
 };
+
+// Append value to Array
+// Returns => JSON: array, boolean: success
+exports.append_value = function (array, value) {
+  try {
+    var dict = JSON.parse(array);
+  dict.push(value);
+  return [dict, true];
+  } catch (e) {
+    return [array, false];
+  }
+  var dict = JSON.parse(array);
+  dict.push(value);
+  return [dict, true];
+
+};
