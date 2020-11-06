@@ -38,3 +38,13 @@ exports.check = function (variable) {
 	} else
   return false;
 };
+
+// get all global variable names
+exports.variables = function () {
+  return Object.keys(storage);
+};
+
+// get global variable data
+exports.data = function() {
+  return storage;
+};
