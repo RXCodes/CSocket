@@ -41,7 +41,7 @@ exports.check = function (variable) {
 
 // get all global variable names
 exports.variables = function () {
-  return [true, Object.keys(storage]);
+  return [true, Object.keys(storage)];
 };
 
 // get global variable data
