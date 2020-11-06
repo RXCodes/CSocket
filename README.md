@@ -27,7 +27,7 @@ Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, y
 # Documentation
 Here are all the behaviors that are currently supported in **CSocket**. Behaviors marked with **🟢** are **fully supported** in both the **CSocket Behavior Editor** and the server itself when compiled.
 
-## Global Storage Category *(6)*
+## Global Storage Category *(7)*
 - `storage.store(variable, value);`
 > _Returns [BOOLEAN: success]_
 >> Declare / set a global variable.
@@ -46,6 +46,9 @@ Here are all the behaviors that are currently supported in **CSocket**. Behavior
 - `storage.variables();`
 > _Returns [BOOLEAN: success, JSON: array]_
 >> Retrieve global variables names as an array.
+- `storage.reset();`
+> _Returns [BOOLEAN: success]_
+>> Clears all global variables.
 
 ## JSON Category *(21)*
 - `json.modify_dictionary_key(dictionary, key, value);`
