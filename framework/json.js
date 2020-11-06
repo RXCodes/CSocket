@@ -3,7 +3,7 @@
 exports.modify_dictionary_key = function (dictionary, key, value) {
   try {
     let dict = dictionary;
-    dict[key] = value;
+    dict[key] = JSON.stringify(value);
     return [dict, true];
     
   } catch (e) {
@@ -24,7 +24,7 @@ exports.get_dictionary_key = function (dictionary, key, default_value) {
     return [default_value, false];
   }
   var dict = JSON.parse(dictionary);
-  return [dict[key], true];
+  return [JSON.parse(dict[key]), true];
 };
 
 // Delete Dictionary Key
