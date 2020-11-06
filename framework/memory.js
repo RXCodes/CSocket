@@ -6,10 +6,10 @@ exports.store = function (variable, value) {
   try {
     storage[variable] = value;
   } catch (e) {
-    return false;
+    return [false];
 	}
 	storage[variable] = value;
-	return true;
+	return [true];
 };
 
 // retrieve a global variable
@@ -26,17 +26,17 @@ exports.retrieve = function (variable, default_value) {
 exports.delete = function (variable) {
   if (storage[variable] !== undefined) {
 	delete storage[variable];
-	return true;
+	return [true];
 	} else
-  return false;
+  return [false];
 };
 
 // check if global variable exists
 exports.check = function (variable) {
   if (storage[variable] !== undefined) {
-	return true;
+	return [true, true];
 	} else
-  return false;
+  return [true, false];
 };
 
 // get all global variable names
@@ -47,4 +47,10 @@ exports.variables = function () {
 // get global variable data
 exports.data = function() {
   return [true, storage];
+};
+
+// reset global variables
+exports.reset = function() {
+  storage = {};
+  return [true];
 };
