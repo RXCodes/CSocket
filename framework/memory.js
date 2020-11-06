@@ -41,10 +41,10 @@ exports.check = function (variable) {
 
 // get all global variable names
 exports.variables = function () {
-  return Object.keys(storage);
+  return [true, Object.keys(storage]);
 };
 
 // get global variable data
 exports.data = function() {
-  return storage;
+  return [true, storage];
 };
