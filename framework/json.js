@@ -355,3 +355,17 @@ exports.get_first_array_value = function (array, default_value) {
   return [dict[dict.length() - 1], true];
 
 };
+
+// Get Random Value
+// Returns => string: value, boolean: success
+exports.get_random_array_value = function (array) {
+  try {
+    let dict = array;
+  return [dict[Math.floor((Math.random() * dict.length() - 1) + 1)], true];
+  } catch (e) {
+    return [default_value, true];
+  }
+  var dict = array;
+  return [dict[Math.floor((Math.random() * dict.length() - 1) + 1)], true];
+
+};
