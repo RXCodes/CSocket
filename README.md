@@ -50,7 +50,7 @@ Here are all the behaviors that are currently supported in **CSocket**. Behavior
 > _Returns [BOOLEAN: success]_
 >> Clears all global variables.
 
-## JSON Category *(21)*
+## JSON Category *(22)*
 - `json.modify_dictionary_key(dictionary, key, value);`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 >> Set a key in a dictionary.
@@ -69,6 +69,9 @@ Here are all the behaviors that are currently supported in **CSocket**. Behavior
 - `json.get_last_array_value(array, default value);`
 > _Returns [STRING: value, BOOLEAN: success]_
 >> Get a value by the last index in an array.
+- `json.get_random_array_value(array);`
+> _Returns [STRING: value, BOOLEAN: success]_
+>> Get any random value in an array.
 - `json.delete_dictionary_key(dictionary, key);`
 > _Returns [JSON: dictionary, BOOLEAN: success]_
 >> Delete a key in a dictionary.
