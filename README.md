@@ -15,7 +15,7 @@ This page only serves as a template / example -- do not use this project to crea
 ### CSocket Behavior System
 Just like in hyperPad, behaviors have multiple inputs and outputs. Once again, you can see them in `framework`. It would be impractical to attempt to code it yourself, unless you are experienced.
 
-- All behaviors return a boolean of if execution was successful. *(returns false when a behavior has failed to execute.)*
+- Many behaviors return a boolean of if execution was successful. *(returns false when a behavior has failed to execute.)*
 - All behaviors directly *usually* don't modify anything, but provide an output which can be used in other behaviors. *(eg. modifying a dictionary THEN storing it into a variable -- this action requires 2 seperate behaviors.)*
 - All behaviors are designed to be crash-proof, so any errors that come by are ignored.
 
